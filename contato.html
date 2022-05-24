@@ -20,27 +20,30 @@
     
     <h1 class="center">Entre em contato comigo</h1>
     <div class="container mb-50">
-    <div> <form>
+    <div> 
+        <form>
         <label for="nome">Nome</label><br>
-        <input type="text" id="nome">
-        <br> 
+        <input type="text" id="nome" onkeyup='validaNome()'>
+        <div id='txtNome'></div>
         <br>    
         <label for="email">Email</label><br>
-        <input type="text" id="email">
-        <br>
+        <input type="text" id="email" onkeyup='validaEmail()'>
+        <div id='txtEmail'></div>
         <br>
         <label for="mensagem">Mensagem</label><br>
-       <textarea name="Mensagem" id="" cols="30" rows="10"></textarea><br>
-       
-       <button>Enviar</button>
+       <textarea name="Mensagem" id="" cols="60" rows="5" onkeyup='validaMensagem()'></textarea><br>
+       <div id='txtMensagem'></div>
+       <button onclick='enviar()'>Enviar</button>
     </form>
+    
 </div>
     <div class="ml-50">
     <p>Av paulista, 1000</p>
     <p>São Paulo</p>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0980318204333!2d-46.6519376!3d-23.5649224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5994f2e15a7d%3A0xdeb92126793e5e90!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1652992018794!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.0980318204333!2d-46.6519376!3d-23.5649224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5994f2e15a7d%3A0xdeb92126793e5e90!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001310-100!5e0!3m2!1spt-BR!2sbr!4v1652992018794!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" onmousemove="mapazomm()" onmouseout="mapaNormal()" id='mapa'></iframe>
     </div>
     <footer>
+    </div>
         <div class="container">
             <a href="https://www.facebook.com/" target="_blank">
                <img class="tm-social p-30" src="assets/img/facebook.png" alt="Logo do Facebook">
@@ -56,6 +59,8 @@
             
          </div>
         <p class="center">
-        Todos os direitos reservados: Cipriana Luis &copy</p> </footer>
+        Todos os direitos reservados: Cipriana Luis &copy</p> 
+    </footer>
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
